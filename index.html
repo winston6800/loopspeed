@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BillAgent (working name): utility bills, handled, for small property managers</title>
+<meta name="description" content="Agents that pull utility and vendor bills from every portal, code them by property, and enter them into AppFolio or QuickBooks. Built for small property managers.">
+<style>
+  :root{--bg:#f7f8fb;--ink:#14171f;--muted:#5b6475;--brand:#1f6feb;--brand-ink:#fff;--card:#fff;--line:#e3e7ef;--tag:#fff4d6;--tag-ink:#7a5a00}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+  a{color:var(--brand)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  .draft{background:var(--tag);color:var(--tag-ink);font-size:.85rem;text-align:center;padding:8px 12px;border-bottom:1px solid #f0dfa8}
+  header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  .logo{font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+  .logo small{font-weight:500;color:var(--muted);font-size:.75rem;margin-left:6px}
+  .hero{padding:56px 0 64px;text-align:center}
+  .hero h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;margin:0 0 16px;letter-spacing:-.02em}
+  .hero p{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 28px}
+  .btn{display:inline-block;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600;padding:14px 26px;border-radius:10px;box-shadow:0 4px 14px rgba(31,111,235,.25)}
+  .btn:hover{filter:brightness(1.07)}
+  .btn.small{padding:9px 16px;font-size:.9rem;box-shadow:none}
+  .sub{font-size:.9rem;color:var(--muted);margin-top:12px}
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  h2{font-size:1.6rem;margin:0 0 8px;letter-spacing:-.01em}
+  .lead{color:var(--muted);margin:0 0 28px;max-width:680px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card h3{margin:0 0 6px;font-size:1.05rem}
+  .card p{margin:0;color:var(--muted)}
+  .num{display:inline-flex;width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;align-items:center;justify-content:center;font-weight:700;margin-bottom:10px}
+  ul.checks{list-style:none;padding:0;margin:0}
+  ul.checks li{padding:8px 0 8px 28px;position:relative}
+  ul.checks li:before{content:"\2713";position:absolute;left:0;top:8px;color:var(--brand);font-weight:700}
+  .price{text-align:center;max-width:460px;margin:0 auto}
+  .price .amt{font-size:2.6rem;font-weight:800;letter-spacing:-.02em;margin:6px 0}
+  .price .amt span{font-size:1rem;font-weight:500;color:var(--muted)}
+  .pill{display:inline-block;background:var(--tag);color:var(--tag-ink);font-size:.75rem;font-weight:600;padding:3px 10px;border-radius:99px;text-transform:uppercase;letter-spacing:.04em}
+  .cta{text-align:center}
+  footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
+  @media (max-width:560px){.hero{padding:36px 0 44px}section{padding:40px 0}header.top .btn{display:none}}
+</style>
+</head>
+<body>
+<div class="draft">Draft preview. "BillAgent" is a working name. Product in development; no customers yet.</div>
+<div class="wrap">
+  <header class="top">
+    <div class="logo">BillAgent<small>(working name)</small></div>
+    <a class="btn small" href="mailto:wz73@uw.edu?subject=BillAgent%20early%20access">Early access</a>
+  </header>
+
+  <div class="hero">
+    <h1>Your utility bills, pulled, coded, and entered. Automatically.</h1>
+    <p>Agents that log into every utility and vendor portal, pull the bills, code them by property, and enter them into AppFolio or QuickBooks. What enterprise platforms do for big portfolios, built for the small property manager.</p>
+    <a class="btn" href="mailto:wz73@uw.edu?subject=BillAgent%20early%20access&amp;body=Hi%20Winston%2C%20I%27d%20like%20to%20join%20the%20early%20access%20list.%0A%0ACompany%3A%0AUnits%20managed%3A%0AAccounting%20system%20(AppFolio%2FQuickBooks%2Fother)%3A">Join the early access list</a>
+    <div class="sub">Opens an email to Winston. No commitment.</div>
+  </div>
+
+  <section>
+    <h2>The problem</h2>
+    <p class="lead">Every property has its own water, power, gas, trash, and vendor accounts. Someone on your team has to chase all of them, every month.</p>
+    <div class="grid">
+      <div class="card"><h3>Too many portals</h3><p>Dozens of logins across utilities and vendors, each with its own layout, password rules, and billing cycle.</p></div>
+      <div class="card"><h3>Manual data entry</h3><p>Every bill gets downloaded, read, coded to the right property and GL account, and typed into your accounting system by hand.</p></div>
+      <div class="card"><h3>Missed and late bills</h3><p>One forgotten portal means late fees, shutoff notices, and a messy month end close.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <p class="lead">Three steps. You stay in control of what gets posted.</p>
+    <div class="grid">
+      <div class="card"><div class="num">1</div><h3>Connect your portals</h3><p>Add the utility and vendor accounts for each property once.</p></div>
+      <div class="card"><div class="num">2</div><h3>The agent pulls and codes bills</h3><p>It logs in on schedule, downloads new bills, and codes each one by property and GL account.</p></div>
+      <div class="card"><div class="num">3</div><h3>Review and push</h3><p>Approve the batch, then send it to AppFolio or QuickBooks in one click.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Who it is for</h2>
+    <p class="lead">Small and mid-size property managers, roughly 50 to 2,000 units, who are too small for enterprise bill pay platforms and too big to keep doing this by hand.</p>
+    <ul class="checks">
+      <li>Residential and mixed portfolios with many separate utility accounts</li>
+      <li>Teams running on AppFolio or QuickBooks</li>
+      <li>Bookkeepers and property accountants who spend days each month on bill entry</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="price card">
+      <span class="pill">Planned pricing</span>
+      <div class="amt">$3 to $5 <span>per utility account / month</span></div>
+      <p style="color:var(--muted);margin:0">Simple per-account pricing that scales with your portfolio. Final pricing will be set with early access partners.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Want this for your portfolio?</h2>
+    <p class="lead" style="margin:0 auto 24px">Join the early access list and help shape what gets built first.</p>
+    <a class="btn" href="mailto:wz73@uw.edu?subject=BillAgent%20early%20access">Join the early access list</a>
+  </section>
+</div>
+<footer>
+  <div class="wrap">Built by Winston Zhang, UW CS senior, who helped oversee browser agents that automate utility billing work. Contact: <a href="mailto:wz73@uw.edu">wz73@uw.edu</a></div>
+</footer>
+</body>
+</html>
